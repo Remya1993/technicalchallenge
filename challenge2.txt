@@ -1,0 +1,14 @@
+in Azure the metadata of an instance can be queried by a service called Azure Instance Metadata Service, its a REST API.
+
+  I would use Python for this as it has a build in module "request" for REST API
+
+
+import requests
+
+url ="http://<instane-ip>/metadata/instance?api-version=2021-02-01&format=json"
+response = requests.get(url)
+response_json= response.json()
+
+
+
+  
