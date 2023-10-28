@@ -1,0 +1,18 @@
+I prefer python as its simple to code
+
+
+object = {'a':{'b':{'c':'d'}}}
+key = 'z'
+value=[]
+
+
+def getvalue(object, value, key):
+    if isinstance(object, dict):
+        for k, v in object.items():
+            if k==key:
+                value.append(v)
+            elif isinstance(v, dict):
+                getvalue(v, value, key)
+    return value
+output = getvalue(object, value, key)
+print (output)
