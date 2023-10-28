@@ -53,7 +53,7 @@ variable "resource_group_location" {
 and access this variable using var.resource_group_location
 
 Similarly using the resource block of terraform, we can create virtual machines and other services required for the setup.
-
+For this scenario, 2 vms for each app tier and web tier should be created. and a DB service. 
 To execute this, below are the cmds
 
 terraform init
